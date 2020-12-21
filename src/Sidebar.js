@@ -15,7 +15,7 @@ function Sidebar() {
         <div>
             <div className = "sidebar__top">
                 <img src ="/images/header-background.jpg" alt = ""/>
-                <Avatar className = "sidebar__avatar" />
+                <Avatar className = "sidebar__avatar" src = "/images/DPR.png" />
                 <h2>Damain Ramsajan</h2>
                 <h4>peterdramsajan@gmail.com</h4>
             </div>
@@ -27,6 +27,23 @@ function Sidebar() {
                 <div className = "sidebar__stat">
                     <p>Views on Post</p>
                     <p className = "sidebar__statNumber">3777</p>
+                </div>
+            </div>
+
+            <div className = "sidebar__top">
+                <img src ="/images/calabashBanner5.jpg" alt = ""/>
+                <Avatar variant="square" className = "sidebar__bizAvatar" src = "/images/logo1.png" />
+                <h2>Intelica Software Solutions</h2>
+                {/* <h4>peterdramsajan@gmail.com</h4> */}
+            </div>
+            <div className = "sidebar__stats">
+                <div className = "sidebar__stat">
+                    <p>Page Notifications</p>
+                    <p className = "sidebar__statNumber">7777</p>
+                </div>
+                <div className = "sidebar__stat">
+                    <p>Page Visitors</p>
+                    <p className = "sidebar__statNumber">77777</p>
                 </div>
             </div>
 
