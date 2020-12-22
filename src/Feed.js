@@ -15,8 +15,9 @@ function Feed() {
     const [input, setInput] = useState ("")
 
     useEffect(() => {
-        db.collection("posts").onSnapshot(snapshot => (
-            setPosts(snapshot.docs.map(doc => (
+        db.collection("posts").orderBy("timestamp", "desc")
+        .onSnapshot(snapshot => (
+        setPosts(snapshot.docs.map(doc => (
                 {
                     id: doc.id,
                     data: doc.data()
@@ -35,9 +36,10 @@ function Feed() {
             message: input,
             photoUrl: "",
             timestamp: firebase.firestore.FieldValue.serverTimestamp (),
+        });
+        setInput ("");
+    };
 
-        })
-    }
     return (
         <div>
            <div className = "feed__inputContainer">
@@ -56,10 +58,6 @@ function Feed() {
                <InputOption Icon = {CalendaViewDayIcon} title ="Write Article" color="#990000"  />
                </div>
            </div>
-          
-           <Post name= "Beany Baby" description= "Founder at your moma's place" message= 
-           "your mom is still angry with me for rubbing pepper on her butt plug" 
-           photoUrl="/images/bean.jpeg" avatar="/images/beany.jpg"/>
 
            {posts.map(({id, data:{name, description, message, photoUrl, avatar} }) => (
                <Post
@@ -71,7 +69,10 @@ function Feed() {
                     avatar={avatar}
                />
            ))}
-           
+          
+           <Post name= "Beany Baby" description= "Founder at your moma's place" message= 
+           "your mom is still angry with me for rubbing pepper on her butt plug" 
+           photoUrl="/images/bean.jpeg" avatar="/images/beany.jpg"/>
         </div>
     )
 }
