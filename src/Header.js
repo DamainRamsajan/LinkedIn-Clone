@@ -13,7 +13,7 @@ function Header() {
         <div className = "header">           
 
             <div className = "header__left">
-                <img src = "/images/logo1.png" alt = "" />
+                <img src = "/images/logo3.png" alt = "" />
                 
                 <div className = "header__search">
                     <SearchIcon/>

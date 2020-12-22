@@ -32,7 +32,7 @@ function Sidebar() {
 
             <div className = "sidebar__top">
                 <img src ="/images/calabashBanner5.jpg" alt = ""/>
-                <Avatar variant="square" className = "sidebar__bizAvatar" src = "/images/logo1.png" />
+                <Avatar variant="square" className = "sidebar__bizAvatar" src = "/images/logo2.png" />
                 <h2>Intelica Software Solutions</h2>
                 {/* <h4>peterdramsajan@gmail.com</h4> */}
             </div>
