@@ -12,7 +12,7 @@ function Sidebar() {
     );
 
     return (
-        <div>
+        <div className = "sidebar">
             <div className = "sidebar__top">
                 <img src ="/images/header-background.jpg" alt = ""/>
                 <Avatar className = "sidebar__avatar" src = "/images/DPR.png" />
